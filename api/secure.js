@@ -12,5 +12,17 @@ function checkAuth(req, res) {
 export default function handler(req, res) {
     if (!checkAuth(req, res)) return;
 
-    res.status(200).json({ message: 'This is the API endpoint.' });
+    res.setHeader('Content-Type', 'text/html');
+    res.status(200).send(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Welcome</title>
+        </head>
+        <body>
+            <h2>Welcome to my Page</h2>
+            <h1>MURAT AYDIN</h1>
+        </body>
+        </html>
+    `);
 }
