@@ -16,11 +16,11 @@ const server = http.createServer((req, res) => {
             <!DOCTYPE html>
             <html>
             <head>
-                <title>Welcome</title>
+                <title>Hoşgeldiniz</title>
             </head>
             <body>
-                <h2>Welcome to my Page</h2>
-                <h1>MURAT AYDIN</h1>
+                <h1>Sunucuya Hoşgeldiniz!</h1>
+                <p>Bu basit bir HTML sayfasıdır.</p>
             </body>
             </html>
         `);
