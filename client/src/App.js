@@ -8,29 +8,17 @@ function App() {
     {
       id: 1,
       title: 'İlk Blog Yazısı',
-      content: 'Bu, ilk blog yazınızın içeriğidir. React ile blog yapmak çok kolay!'
+      content: 'Hamilelikten sonra vücut değişiklikleri hakkında bilgilendirici bir yazı. Bu yazıda hamilelik sonrası vücut değişiklikleri, kilo verme yöntemleri ve sağlıklı yaşam ipuçları ele alınacaktır.'
     },
     {
       id: 2,
       title: 'İkinci Yazı',
-      content: 'İkinci yazınız burada. Dilerseniz yeni yazılar ekleyebilirsiniz.'
+      content: '2.ayda hamilelik belirtileri, bebeğin gelişimi ve anne adayının sağlığı hakkında bilgiler. Bu yazıda, 2. ayda hamilelik belirtileri, bebeğin gelişimi ve anne adayının sağlığı hakkında bilgiler verilecektir.'
     }
   ]);
 
   return (
     <div className="App" style={{ maxWidth: 600, margin: '3rem auto', fontFamily: 'sans-serif' }}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hoşgeldiniz!</h1>
-        <p>Bu, Vercel üzerinde çalışan basit bir React önyüzüdür.</p>
-        <p>
-          Backend API için{' '}
-          <a className="App-link" href="/api/api">
-            /api/api
-          </a>{' '}
-          adresini ziyaret edebilirsiniz.
-        </p>
-      </header>
       <h1>Basit Blog</h1>
       {posts.map(post => (
         <div key={post.id} style={{ border: '1px solid #eee', borderRadius: 8, padding: 16, marginBottom: 24 }}>
