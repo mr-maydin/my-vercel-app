@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import Sidebar from './Sidebar';
 import './App.css';
 
 function App() {
-  // Örnek blog verisi
   const [posts] = useState([
     {
       id: 1,
@@ -18,14 +17,17 @@ function App() {
   ]);
 
   return (
-    <div className="App" style={{ maxWidth: 600, margin: '3rem auto', fontFamily: 'sans-serif' }}>
-      <h1>Basit Blog</h1>
-      {posts.map(post => (
-        <div key={post.id} style={{ border: '1px solid #eee', borderRadius: 8, padding: 16, marginBottom: 24 }}>
-          <h2 style={{ margin: '0 0 8px 0' }}>{post.title}</h2>
-          <p style={{ margin: 0 }}>{post.content}</p>
-        </div>
-      ))}
+    <div className="min-h-screen flex bg-gray-100">
+      <Sidebar />
+      <main className="flex-1 p-10">
+        <h1 className="text-3xl font-bold mb-8 text-center">Blog Yazıları</h1>
+        {posts.map(post => (
+          <div key={post.id} className="border border-gray-200 rounded-lg p-6 mb-6 shadow-sm bg-white">
+            <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
+            <p className="text-gray-700">{post.content}</p>
+          </div>
+        ))}
+      </main>
     </div>
   );
 }
